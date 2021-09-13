@@ -13,7 +13,17 @@
   --btn-blue: #017BFF;
   --addictional-blue: #325FA0;
   --card-strong-blue: #141C2F;
+  --white: #fff;
 }
+
+/* :root.sun {
+  --primary-blue: #fafafa;
+  --secondary-blue: #e0dfdf;
+  --btn-blue: #017BFF;
+  --addictional-blue: #325FA0;
+  --card-strong-blue: #fafafa;
+  --white: #fff;
+} */
 
 body {
   width: 100vw;
@@ -51,7 +61,7 @@ main {
   width: 100%;
   height: 50%;
   font-size: 25px;
-  color: #fff;
+  color: var(--white);
 
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -70,14 +80,75 @@ main {
   justify-content: flex-end;
   align-items: center;
 }
-#sun-icon {
-  padding: 0 10px;
-}
 .cursor {
   width: max-content;
   height: max-content;
-  cursor: pointer;
+  cursor: default;
 }
+.switchTheme {
+  width: 100%;
+  height: 100%;
+  padding: 0 10px;
+
+  cursor: pointer;
+  
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  position: relative;
+}
+.checkbox {
+  background-color: var(--secondary-blue);
+  width: 40px;
+  height: 25px;
+
+  cursor: pointer;
+
+  outline: none;
+  
+  border-radius: 20px;
+  -webkit-appearance: none;
+}
+.checkbox:checked {
+  background-color: red;
+  transition: .4s;
+}
+.checkbox:checked + .checkbox:checked {
+  transform: translateX(10px);
+}
+.sun {
+  padding-left: 5px;
+
+  border-radius: 20px;
+
+  position: absolute;
+  left: 0;
+  transition: .4s all ease;
+}
+.checkbox:checked + .sun {
+  left: 50%;
+}
+
+/* .checkbox::before {
+  background-color: #fff;
+  width: 30px;
+  height: 30px;
+
+  content: 'dd';
+
+  border-radius: 20px;
+
+  position: absolute;
+  top: 15.3%;
+  left: 72%;
+
+  transition: .1s;
+}
+.checkbox:checked::before {
+  left: 73%;
+} */
 
 
 .head-main {
@@ -105,7 +176,7 @@ main {
   width: 96%;
   height: 50%;
   background-color: inherit;
-  color: #fff;
+  color: var(--white);
   font-size: 25px;
   font-family: 'Open Sans', sans-serif;
 
@@ -115,13 +186,13 @@ main {
   border-bottom: 2px solid var(--btn-blue);
 }
 .searchInput::placeholder {
-  color: #fff;
+  color: var(--white);
   font-family: 'Open Sans', sans-serif;
 }
 .searchBtn {
   width: 15%;
   height: 50%;
-  color: #fff;
+  color: var(--white);
   background-color: var(--btn-blue);
   cursor: pointer;
 
@@ -203,11 +274,11 @@ main {
 
 .estilizacaoLabels {
   font-size: 18px;
-  color: #fff;
+  color: var(--white);
 }
 
 .numbersFoot {
-  color: #fff;
+  color: var(--white);
   font-size: 20px;
   font-weight: bold;
   text-align :start;

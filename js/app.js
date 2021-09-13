@@ -255,3 +255,11 @@ const showNotFound = () => {
 
   footVisorHead.appendChild(contentInfoUserDiv)
 }
+
+
+
+const changeThemeBtn = document.querySelector('.checkbox')
+
+changeThemeBtn.addEventListener('change', () => {
+  document.body.classList.toggle('sun');
+})
