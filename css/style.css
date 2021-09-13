@@ -1,0 +1,234 @@
+@import url('https://fonts.googleapis.com/css2?family=Glory:wght@200&family=Open+Sans:wght@300&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-blue: #141C2F;
+  --secondary-blue: #1F2A48;
+  --btn-blue: #017BFF;
+  --addictional-blue: #325FA0;
+  --card-strong-blue: #141C2F;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--primary-blue);
+  font-family: 'Open Sans', sans-serif;
+}
+
+main {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  width: 50%;
+  height: 75%;
+  background-color: var(--primary-blue);
+  display: grid;
+  grid-template-areas: "h" 'f';
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 3fr;
+  grid-gap: 20px;
+}
+
+.head {
+  width: 100%;
+  grid-area: h;
+}
+
+.head-header {
+  width: 100%;
+  height: 50%;
+  font-size: 25px;
+  color: #fff;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  align-items: center;
+}
+#github-searcher {
+  padding-left: 10px;
+}
+.head-header-theme {
+  width: 100%;
+  height: 100%;
+  font-size: 20px;
+
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+#sun-icon {
+  padding: 0 10px;
+}
+.cursor {
+  width: max-content;
+  height: max-content;
+  cursor: pointer;
+}
+
+
+.head-main {
+  width: 100%;
+  height: 50%;
+  background-color: var(--secondary-blue);
+
+  border-radius: 10px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+#searchInput-div {
+  width: 75%;
+  height: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.searchInput {
+  width: 96%;
+  height: 50%;
+  background-color: inherit;
+  color: #fff;
+  font-size: 25px;
+  font-family: 'Open Sans', sans-serif;
+
+  outline: none;
+
+  border: none;
+  border-bottom: 2px solid var(--btn-blue);
+}
+.searchInput::placeholder {
+  color: #fff;
+  font-family: 'Open Sans', sans-serif;
+}
+.searchBtn {
+  width: 15%;
+  height: 50%;
+  color: #fff;
+  background-color: var(--btn-blue);
+  cursor: pointer;
+
+  border: 2px solid var(--btn-blue);
+  border-radius: 10px;
+}
+
+
+.foot {
+  width: 100%;
+  grid-area: f;
+
+  border-radius: 10px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.footVisor {
+  width: 90%;
+  height: 75%;
+
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 2fr;
+}
+
+.footVisor-head {
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: 'avatar content createDate';
+  align-items: center;
+  justify-items: center;
+}
+
+.avatarImgUser {
+  width: 100%;
+
+  border-radius: 50%;
+
+  grid-area: avatar;
+}
+
+.contentInfoUser-div {
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: flex-start;
+
+  grid-area: content;
+}
+
+.footVisor-foot {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas: 'cardStrongBlue' 'locate';
+
+  align-items: center;
+  justify-items: end;
+}
+
+.cardStrongBlue {
+  grid-area: cardStrongBlue;
+  background-color: var(--card-strong-blue);
+  width: 75%;
+  height: 100%;
+
+  border-radius: 10px;
+
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.estilizacaoLabels {
+  font-size: 18px;
+  color: #fff;
+}
+
+.numbersFoot {
+  color: #fff;
+  font-size: 20px;
+  font-weight: bold;
+  text-align :start;
+}
+
+.divLocationCompany {
+  width: 75%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: nowrap;
+  justify-content: center;
+}
+
+@media screen and (min-width: 2560px) {
+  .avatarImgUser {
+    width: 85%;
+  
+    border-radius: 50%;
+  
+    grid-area: avatar;
+  }
+}
